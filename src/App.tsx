@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, useState } from 'react'
+import { ChangeEvent, FC, useState } from 'react'
 import './App.css'
 import { ITask } from './interfaces'
 import TodoTask from './Component/TodoTask'
@@ -19,7 +19,7 @@ const App: FC = () => {
   }
 
   const addTask = () => { 
-    const newTask = { taskName: task, deadline: deadline}
+    const newTask: ITask = { taskName: task, deadline: deadline }
     setTodoList([...todoList, newTask]);
     setTask("");
     setDeadline(0);
